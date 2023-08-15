@@ -1,0 +1,394 @@
+@import url('https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz@10..48&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
+
+@font-face {
+    font-family: dragon;
+    src: url('assets/Dragon/Dragon-Regular-BF64b9fed53b5bb.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: helsinki;
+    src: url('assets/Helsinki/helsinkixxl-black.otf') format('opentype');
+}
+
+$sans: 'Nunito';
+$grot: 'Bricolage Grotesque';
+
+$blue: rgb(37,44,53);
+$light-blue: rgb(52,96,199);
+$purple: rgb(81,70,174);
+$grey: rgb(37,37,37);
+$light: #dfd3c3;
+
+body {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    overflow-x: hidden;
+}
+
+/*
+MENU
+    background purple
+    text light
+    hover text grey
+
+HOME
+
+PORTFOLIO
+
+CONTACT
+
+FOOTER
+    background grey
+    text light
+*/
+.navigation {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    position: fixed;
+    padding: 1rem 3rem;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+
+    .logo {
+
+        a {
+            text-decoration: none;
+            color: white;
+            font-family: $grot;
+        }
+    }
+
+    .button {
+        cursor: pointer;
+        display: flex;
+        padding: 0;
+        align-items: center;
+        font-family: $sans;
+        z-index: 1000;
+        color: white;
+
+        i {
+            margin: 0 .4rem;
+            font-size: 1.2rem;
+        }
+    }
+}
+
+.tabs {
+    overflow: hidden;
+}
+
+.menu {
+    position: absolute;
+    transform-origin: top;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100%;
+    background: $purple;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 100;
+
+
+    .left {
+        display: flex;
+        flex-direction: column;
+        color: $light;
+        margin-left: 3rem;
+
+
+        a {
+            font-family: helsinki;
+            text-transform: capitalize;
+            margin: 0;
+            font-size: 8rem;
+            cursor: pointer;
+
+            &:hover {
+                color: $grey;
+            }
+        }
+    }
+
+    .right{
+        text-align: right;
+        color: $light;
+        margin-right: 3rem;
+
+        h2, h4 {
+            font-family: $sans;
+        }
+
+        h4 {
+            cursor: pointer;
+
+            &:hover {
+                color: $grey;
+            }
+        }
+
+        ul {
+            display: flex;
+            justify-content: space-between;
+            padding: 0;
+
+            a {
+                padding: 0;
+                color: $light;
+                margin-left: 10px;
+            }
+
+            li {
+                list-style: none;
+                border-radius: 3px;
+                font-size: 2rem;
+                padding: 10px 15px;
+                background: rgba($light, .2);
+
+                &:hover {
+                    background: $grey;
+                }
+            }
+        }
+    }
+}
+
+
+.home {
+    color: $grey;
+    background: $light;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 3rem;
+    height: 100vh;
+
+    .wrapper {
+        // background: red;
+        padding: 3rem;
+        
+        .name {
+            display: flex;
+            
+            h1 {
+                font-family: helsinki;
+                letter-spacing: 3px;
+                text-transform: capitalize;
+                margin: 0;
+                font-size: 10rem;
+                cursor: default;
+            }
+
+        }
+
+        .intro {
+            
+            p {
+                font-family: $sans;
+                cursor: default;
+                margin: 0;
+                padding: 0;
+            }
+        }
+    }
+}
+
+
+.portfolio {
+    background: $light-blue;
+    position: relative;
+    z-index: 10;
+    padding: 3rem;
+
+    .works { 
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+    }
+
+}
+
+    .head {
+        position: absolute;
+        top: 1rem;
+        left: 0;
+        right: 0;
+        text-align: center;
+        color: $light;
+        font-family: $sans;
+    }
+
+.card {
+    color: white;
+    font-size: 1.2rem;
+    margin: 2rem 0;
+
+    .title {
+        font-family: $grot;
+        margin-bottom: 1rem;
+        cursor: default;
+    }
+
+    .img {
+            overflow: hidden;
+            height: 25rem;
+            display: flex;
+            align-items: center;
+            border-radius: 10px;
+            margin-bottom: 1rem;
+
+        img {
+            width: 100%;
+            object-fit: contain;
+            transition: 500ms ease;
+
+            &:hover {
+                scale: 1.02;
+            }
+        }
+    }
+
+    .desc {
+        font-family: $sans;
+        margin-bottom: 1rem;
+        cursor: default;
+    }
+
+    .links {
+
+        a {
+            text-decoration: none;
+            color: $light;
+            margin-right: .5rem;
+
+            &:hover {
+                color: $grey;
+            }
+        }
+    }
+}
+
+
+.contact {
+    background: $blue;
+    height: 100vh;
+    position: relative;
+    display: flex;
+    align-items: center;
+            color: $light;
+
+    .left, .right {
+        padding: 3rem;
+    }
+    .left {
+        width: 50%;
+
+        h1 {
+            cursor: pointer;
+            font-size: 4rem;
+            font-family: $grot;
+        }
+
+        p {
+            float: right;
+            font-family: $sans;
+        }
+    }
+    
+    .right {
+
+        ul {
+
+            li {
+                list-style: none;
+                padding: 2rem;
+                border-top: 1px solid rgba($light, .2);
+                font-family: $sans;
+
+                a {
+                    text-decoration: none;
+                    color: $light;
+                    font-size: 1.2rem;
+
+                    &:hover {
+                        color: $light-blue;
+                    }
+
+                    .uil {
+                        margin-right: 0.5rem;
+                    }
+                }
+            }
+        }
+    }
+
+    // padding: 3rem;
+}
+
+
+// ABOUT ME BUTTON
+.cta {
+    position: relative;
+    cursor: pointer;
+    margin: auto;
+    padding: 12px 18px;
+    transition: all 0.2s ease;
+    border: none;
+    background: none;
+   }
+   
+   .cta:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    border-radius: 50px;
+    background: $grey;
+    width: 45px;
+    height: 45px;
+    transition: all 0.3s ease;
+   }
+   
+   .cta span {
+    position: relative;
+    font-family: $sans, sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    color: $light;
+   }
+   
+   .cta svg {
+    position: relative;
+    top: 0;
+    margin-left: 10px;
+    fill: none;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke: $light;
+    stroke-width: 2;
+    transform: translateX(-5px);
+    transition: all 0.3s ease;
+   }
+   
+   .cta:hover:before {
+    width: 100%;
+    background: $grey;
+   }
+   
+   .cta:hover svg {
+    transform: translateX(0);
+   }
+   
+   .cta:active {
+    transform: scale(0.95);
+   }

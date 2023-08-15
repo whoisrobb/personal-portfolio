@@ -1,0 +1,323 @@
+@import url("https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz@10..48&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Nunito&display=swap");
+@font-face {
+  font-family: dragon;
+  src: url("assets/Dragon/Dragon-Regular-BF64b9fed53b5bb.ttf") format("truetype");
+}
+@font-face {
+  font-family: helsinki;
+  src: url("assets/Helsinki/helsinkixxl-black.otf") format("opentype");
+}
+body {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  width: 100vw;
+  overflow-x: hidden;
+}
+
+/*
+MENU
+    background purple
+    text light
+    hover text grey
+
+HOME
+
+PORTFOLIO
+
+CONTACT
+
+FOOTER
+    background grey
+    text light
+*/
+.navigation {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  position: fixed;
+  padding: 1rem 3rem;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+}
+.navigation .logo a {
+  text-decoration: none;
+  color: white;
+  font-family: "Bricolage Grotesque";
+}
+.navigation .button {
+  cursor: pointer;
+  display: flex;
+  padding: 0;
+  align-items: center;
+  font-family: "Nunito";
+  z-index: 1000;
+  color: white;
+}
+.navigation .button i {
+  margin: 0 0.4rem;
+  font-size: 1.2rem;
+}
+
+.tabs {
+  overflow: hidden;
+}
+
+.menu {
+  position: absolute;
+  transform-origin: top;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100%;
+  background: rgb(81, 70, 174);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 100;
+}
+.menu .left {
+  display: flex;
+  flex-direction: column;
+  color: #dfd3c3;
+  margin-left: 3rem;
+}
+.menu .left a {
+  font-family: helsinki;
+  text-transform: capitalize;
+  margin: 0;
+  font-size: 8rem;
+  cursor: pointer;
+}
+.menu .left a:hover {
+  color: rgb(37, 37, 37);
+}
+.menu .right {
+  text-align: right;
+  color: #dfd3c3;
+  margin-right: 3rem;
+}
+.menu .right h2, .menu .right h4 {
+  font-family: "Nunito";
+}
+.menu .right h4 {
+  cursor: pointer;
+}
+.menu .right h4:hover {
+  color: rgb(37, 37, 37);
+}
+.menu .right ul {
+  display: flex;
+  justify-content: space-between;
+  padding: 0;
+}
+.menu .right ul a {
+  padding: 0;
+  color: #dfd3c3;
+  margin-left: 10px;
+}
+.menu .right ul li {
+  list-style: none;
+  border-radius: 3px;
+  font-size: 2rem;
+  padding: 10px 15px;
+  background: rgba(223, 211, 195, 0.2);
+}
+.menu .right ul li:hover {
+  background: rgb(37, 37, 37);
+}
+
+.home {
+  color: rgb(37, 37, 37);
+  background: #dfd3c3;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0 3rem;
+  height: 100vh;
+}
+.home .wrapper {
+  padding: 3rem;
+}
+.home .wrapper .name {
+  display: flex;
+}
+.home .wrapper .name h1 {
+  font-family: helsinki;
+  letter-spacing: 3px;
+  text-transform: capitalize;
+  margin: 0;
+  font-size: 10rem;
+  cursor: default;
+}
+.home .wrapper .intro p {
+  font-family: "Nunito";
+  cursor: default;
+  margin: 0;
+  padding: 0;
+}
+
+.portfolio {
+  background: rgb(52, 96, 199);
+  position: relative;
+  z-index: 10;
+  padding: 3rem;
+}
+.portfolio .works {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+}
+
+.head {
+  position: absolute;
+  top: 1rem;
+  left: 0;
+  right: 0;
+  text-align: center;
+  color: #dfd3c3;
+  font-family: "Nunito";
+}
+
+.card {
+  color: white;
+  font-size: 1.2rem;
+  margin: 2rem 0;
+}
+.card .title {
+  font-family: "Bricolage Grotesque";
+  margin-bottom: 1rem;
+  cursor: default;
+}
+.card .img {
+  overflow: hidden;
+  height: 25rem;
+  display: flex;
+  align-items: center;
+  border-radius: 10px;
+  margin-bottom: 1rem;
+}
+.card .img img {
+  width: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+  transition: 500ms ease;
+}
+.card .img img:hover {
+  scale: 1.02;
+}
+.card .desc {
+  font-family: "Nunito";
+  margin-bottom: 1rem;
+  cursor: default;
+}
+.card .links a {
+  text-decoration: none;
+  color: #dfd3c3;
+  margin-right: 0.5rem;
+}
+.card .links a:hover {
+  color: rgb(37, 37, 37);
+}
+
+.contact {
+  background: rgb(37, 44, 53);
+  height: 100vh;
+  position: relative;
+  display: flex;
+  align-items: center;
+  color: #dfd3c3;
+}
+.contact .left, .contact .right {
+  padding: 3rem;
+}
+.contact .left {
+  width: 50%;
+}
+.contact .left h1 {
+  cursor: pointer;
+  font-size: 4rem;
+  font-family: "Bricolage Grotesque";
+}
+.contact .left p {
+  float: right;
+  font-family: "Nunito";
+}
+.contact .right ul li {
+  list-style: none;
+  padding: 2rem;
+  border-top: 1px solid rgba(223, 211, 195, 0.2);
+  font-family: "Nunito";
+}
+.contact .right ul li a {
+  text-decoration: none;
+  color: #dfd3c3;
+  font-size: 1.2rem;
+}
+.contact .right ul li a:hover {
+  color: rgb(52, 96, 199);
+}
+.contact .right ul li a .uil {
+  margin-right: 0.5rem;
+}
+
+.cta {
+  position: relative;
+  cursor: pointer;
+  margin: auto;
+  padding: 12px 18px;
+  transition: all 0.2s ease;
+  border: none;
+  background: none;
+}
+
+.cta:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  border-radius: 50px;
+  background: rgb(37, 37, 37);
+  width: 45px;
+  height: 45px;
+  transition: all 0.3s ease;
+}
+
+.cta span {
+  position: relative;
+  font-family: "Nunito", sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  color: #dfd3c3;
+}
+
+.cta svg {
+  position: relative;
+  top: 0;
+  margin-left: 10px;
+  fill: none;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke: #dfd3c3;
+  stroke-width: 2;
+  transform: translateX(-5px);
+  transition: all 0.3s ease;
+}
+
+.cta:hover:before {
+  width: 100%;
+  background: rgb(37, 37, 37);
+}
+
+.cta:hover svg {
+  transform: translateX(0);
+}
+
+.cta:active {
+  transform: scale(0.95);
+}/*# sourceMappingURL=App.css.map */
