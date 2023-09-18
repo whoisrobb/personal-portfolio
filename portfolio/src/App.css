@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz@10..48&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz@12..96&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Nunito&display=swap");
 @font-face {
   font-family: dragon;
@@ -16,22 +16,6 @@ body {
   overflow-x: hidden;
 }
 
-/*
-MENU
-    background purple
-    text light
-    hover text grey
-
-HOME
-
-PORTFOLIO
-
-CONTACT
-
-FOOTER
-    background grey
-    text light
-*/
 .navigation {
   display: flex;
   justify-content: space-between;
@@ -82,7 +66,7 @@ FOOTER
 .menu .left {
   display: flex;
   flex-direction: column;
-  color: #dfd3c3;
+  color: #E8E9EC;
   margin-left: 3rem;
 }
 .menu .left a {
@@ -97,7 +81,7 @@ FOOTER
 }
 .menu .right {
   text-align: right;
-  color: #dfd3c3;
+  color: #E8E9EC;
   margin-right: 3rem;
 }
 .menu .right h2, .menu .right h4 {
@@ -116,7 +100,7 @@ FOOTER
 }
 .menu .right ul a {
   padding: 0;
-  color: #dfd3c3;
+  color: #E8E9EC;
   margin-left: 10px;
 }
 .menu .right ul li {
@@ -124,7 +108,7 @@ FOOTER
   border-radius: 3px;
   font-size: 2rem;
   padding: 10px 15px;
-  background: rgba(223, 211, 195, 0.2);
+  background: rgba(232, 233, 236, 0.2);
 }
 .menu .right ul li:hover {
   background: rgb(37, 37, 37);
@@ -132,7 +116,7 @@ FOOTER
 
 .home {
   color: rgb(37, 37, 37);
-  background: #dfd3c3;
+  background: #E8E9EC;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -140,24 +124,29 @@ FOOTER
   height: 100vh;
 }
 .home .wrapper {
-  padding: 3rem;
+  height: 100%;
+  display: grid;
+  grid-template-rows: 2fr 1.5fr 2fr;
 }
-.home .wrapper .name {
-  display: flex;
-}
-.home .wrapper .name h1 {
-  font-family: helsinki;
-  letter-spacing: 3px;
-  text-transform: capitalize;
-  margin: 0;
-  font-size: 10rem;
-  cursor: default;
-}
-.home .wrapper .intro p {
+.home .wrapper p {
+  color: #051761;
   font-family: "Nunito";
-  cursor: default;
-  margin: 0;
-  padding: 0;
+  font-weight: 700;
+}
+.home .wrapper .two {
+  border-top: 1px solid rgba(5, 23, 97, 0.5);
+  border-bottom: 1px solid rgba(5, 23, 97, 0.5);
+  display: flex;
+  justify-content: space-around;
+}
+.home .wrapper .two .desc {
+  width: 20rem;
+}
+.home .wrapper .three .intro {
+  width: 80%;
+}
+.home .wrapper .three .intro p {
+  font-size: 3rem;
 }
 
 .portfolio {
@@ -178,7 +167,7 @@ FOOTER
   left: 0;
   right: 0;
   text-align: center;
-  color: #dfd3c3;
+  color: #E8E9EC;
   font-family: "Nunito";
 }
 
@@ -216,7 +205,7 @@ FOOTER
 }
 .card .links a {
   text-decoration: none;
-  color: #dfd3c3;
+  color: #E8E9EC;
   margin-right: 0.5rem;
 }
 .card .links a:hover {
@@ -229,7 +218,7 @@ FOOTER
   position: relative;
   display: flex;
   align-items: center;
-  color: #dfd3c3;
+  color: #E8E9EC;
 }
 .contact .left, .contact .right {
   padding: 3rem;
@@ -249,12 +238,12 @@ FOOTER
 .contact .right ul li {
   list-style: none;
   padding: 2rem;
-  border-top: 1px solid rgba(223, 211, 195, 0.2);
+  border-top: 1px solid rgba(232, 233, 236, 0.2);
   font-family: "Nunito";
 }
 .contact .right ul li a {
   text-decoration: none;
-  color: #dfd3c3;
+  color: #E8E9EC;
   font-size: 1.2rem;
 }
 .contact .right ul li a:hover {
@@ -293,7 +282,7 @@ FOOTER
   font-size: 18px;
   font-weight: 700;
   letter-spacing: 0.05em;
-  color: #dfd3c3;
+  color: #E8E9EC;
 }
 
 .cta svg {
@@ -303,7 +292,7 @@ FOOTER
   fill: none;
   stroke-linecap: round;
   stroke-linejoin: round;
-  stroke: #dfd3c3;
+  stroke: #E8E9EC;
   stroke-width: 2;
   transform: translateX(-5px);
   transition: all 0.3s ease;

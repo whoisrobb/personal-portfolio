@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz@10..48&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz@12..96&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
 
 @font-face {
@@ -16,9 +16,10 @@ $grot: 'Bricolage Grotesque';
 
 $blue: rgb(37,44,53);
 $light-blue: rgb(52,96,199);
+$deep-blue: #051761;
 $purple: rgb(81,70,174);
 $grey: rgb(37,37,37);
-$light: #dfd3c3;
+$light: #E8E9EC;
 
 body {
     box-sizing: border-box;
@@ -28,22 +29,6 @@ body {
     overflow-x: hidden;
 }
 
-/*
-MENU
-    background purple
-    text light
-    hover text grey
-
-HOME
-
-PORTFOLIO
-
-CONTACT
-
-FOOTER
-    background grey
-    text light
-*/
 .navigation {
     display: flex;
     justify-content: space-between;
@@ -172,30 +157,35 @@ FOOTER
     height: 100vh;
 
     .wrapper {
-        // background: red;
-        padding: 3rem;
+        height: 100%;
+        display: grid;
+        grid-template-rows: 2fr 1.5fr 2fr;
         
-        .name {
-            display: flex;
-            
-            h1 {
-                font-family: helsinki;
-                letter-spacing: 3px;
-                text-transform: capitalize;
-                margin: 0;
-                font-size: 10rem;
-                cursor: default;
-            }
-
+        p {
+            color: $deep-blue;
+            font-family: $sans;
+            font-weight: 700;
         }
 
-        .intro {
-            
-            p {
-                font-family: $sans;
-                cursor: default;
-                margin: 0;
-                padding: 0;
+        .two {
+            border-top: 1px solid rgba($deep-blue, .5);
+            border-bottom: 1px solid rgba($deep-blue, .5);
+            display: flex;
+            justify-content: space-around;
+
+            .desc {
+                width: 20rem;
+            }
+        }
+
+        .three {
+
+            .intro {
+                width: 80%;
+
+                p {
+                    font-size: 3rem;
+                }
             }
         }
     }
