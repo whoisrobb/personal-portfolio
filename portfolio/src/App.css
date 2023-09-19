@@ -15,6 +15,9 @@ body {
   width: 100vw;
   overflow-x: hidden;
 }
+body::-webkit-scrollbar {
+  display: none;
+}
 
 .navigation {
   display: flex;
@@ -29,17 +32,21 @@ body {
 }
 .navigation .logo a {
   text-decoration: none;
-  color: white;
+  mix-blend-mode: difference;
+  color: #051761;
   font-family: "Bricolage Grotesque";
 }
 .navigation .button {
+  mix-blend-mode: difference;
+  color: #051761;
   cursor: pointer;
   display: flex;
   padding: 0;
   align-items: center;
   font-family: "Nunito";
+  position: relative;
   z-index: 1000;
-  color: white;
+  mix-blend-mode: difference;
 }
 .navigation .button i {
   margin: 0 0.4rem;
@@ -178,7 +185,6 @@ body {
 }
 .card .title {
   font-family: "Bricolage Grotesque";
-  margin-bottom: 1rem;
   cursor: default;
 }
 .card .img {
@@ -187,13 +193,13 @@ body {
   display: flex;
   align-items: center;
   border-radius: 10px;
-  margin-bottom: 1rem;
+  margin: 1rem 0;
 }
 .card .img img {
   width: 100%;
   -o-object-fit: contain;
      object-fit: contain;
-  transition: 500ms ease;
+  transition: 300ms ease;
 }
 .card .img img:hover {
   scale: 1.02;
@@ -309,4 +315,42 @@ body {
 
 .cta:active {
   transform: scale(0.95);
+}
+
+/* MEDIA QUERIES */
+@media (max-width: 767px) {
+  /* NAVIGATION */
+  .navigation {
+    padding: 1rem;
+  }
+  /* MENU */
+  .menu .right {
+    display: none;
+  }
+  /* HOME */
+  .home {
+    padding: 0 1rem;
+  }
+  .home .wrapper .three .intro p {
+    font-size: 2rem;
+  }
+  /* PORTFOLIO */
+  .portfolio {
+    padding: 1rem;
+  }
+  .portfolio .works {
+    grid-template-columns: 1fr;
+  }
+  .portfolio .works .img {
+    margin: 0;
+  }
+  /* CONTACT */
+  .contact {
+    height: auto;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .contact .left, .contact .right {
+    padding: 1rem;
+  }
 }/*# sourceMappingURL=App.css.map */
