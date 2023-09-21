@@ -100,7 +100,7 @@ const Menu = ({ closeMenu }) => {
         <div
         className="left">
                 {tabs.map((tab) => (
-                    <div className="tabs">
+                    <div key={tab} className="tabs">
                         <motion.div                   
                         variants={leftVars}
                         initial='initial'

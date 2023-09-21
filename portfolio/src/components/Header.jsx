@@ -11,20 +11,16 @@ const Header = () => {
 
   return (
     <>
-        <div className='navigation'>
-            <div className="logo">
-                <a href="">muchiri</a>
-            </div>
-            <div
-            onClick={() => setMenu(!menu)}
-            className="button">
-                <i className="uil uil-bars"></i>
-                Menu
-            </div>
-            <AnimatePresence>
-                {menu && <Menu closeMenu={toggleMenu} />}
-            </AnimatePresence>
+        <a className='logo' href="">muchiri</a>
+        <div
+        onClick={() => setMenu(!menu)}
+        className="menu-button">
+            <i className="uil uil-bars"></i>
+            Menu
         </div>
+        <AnimatePresence>
+            {menu && <Menu closeMenu={toggleMenu} />}
+        </AnimatePresence>
     </>
   )
 }
